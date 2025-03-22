@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'DrukWide-Bold-Web';
+    src: url('data/FontsFree-Net-Druk-Wide-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AreaNormal';
+    src: url('data/AreaNormal-Semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    height: 4rem;
+    transition: transform 0.5s ease-out;
+}
+
+.hide-header {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-out;
+}   
+
+.show-header {
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+}
+
+.logo {
+    font-family: 'DrukWide-Bold-Web', Helvetica,Arial, sans-serif;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    gap: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.homepage {
+    margin: 100px;
+    position: relative;
+}
+
+#maintext{
+    font-family: 'DrukWide-Bold-Web', Helvetica,Arial, sans-serif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    line-height: 1;
+    position: relative;
+    z-index: 2;
+    pointer-events: none; 
+    background: none;
+}
+
+.images {
+    position: relative;
+    z-index: 1;
+}
+
+.image-container img{
+    height: 200px;
+    width: 330px;
+}
+
+.image-container {
+    background: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.image-container:hover {
+    z-index: 3; 
+}
+
+.image-container:hover .imgtext{
+    opacity: 1;
+    visibility: visible;
+}
+
+.imgtext{
+    position: relative;
+    bottom: 35px;
+    left: 185px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'DrukWide-Bold-Web', Helvetica,Arial, sans-serif;
+    text-transform: uppercase;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0s ease-in-out, visibility 0.3s ease-in-out;
+    max-width: 250px; 
+    text-align: left;
+    white-space: nowrap; 
+}
+
+.imgtext p{
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: capitalize;
+    background: none;
+}
+
+.placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 330px;
+    height: 200px;
+    opacity: 0;
+    background: none;
+    transition: opacity 0s ease-in-out;
+}
+
+#img1{
+    bottom: 38vh;
+    left: 55vw;
+}
+
+#img2{
+    bottom: 18vh;
+    left: 8vw;
+}
+
+#img3{
+    bottom: 2vh;
+    right: 10vw;
+}
+
+#img4{
+    bottom: -18vh;
+    right: 54vw;
+}
+
+.vision {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 150px; 
+    padding: 50px;
+}
+
+
+.vision-heading {
+    font-family: 'AreaNormal';
+    text-transform: uppercase;
+    writing-mode: vertical-rl;  
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+#v1{
+    right: 5px;
+}
+
+#v2{
+    left: 5px;
+    transform: rotate(180deg); 
+}
+
+.left-section {
+    flex: 1;
+    min-width: 38%;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'AreaNormal', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    min-height: 1rem;
+    gap: 20px;
+}
+
+.see-more{
+    font-size: 14px;
+    font-family: 'AreaNormal';
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-flex; 
+    width: fit-content;
+    align-items: center;
+    gap: 10px; 
+    position: relative;
+    color: white;
+}
+
+.see-more::before{
+    content: "→"; 
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+}
+
+.see-more:hover::before{
+    transform: translateX(5px);
+}
+
+.see-more::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+
+.see-more:hover::after {
+    width: 100%;
+}
+
+.see-more:not(:hover)::after {
+    width: 0%;
+    left: 0;
+    transition: width 0.3s ease-in, left 0.3s ease-in;
+}
+
+.right-section {
+    flex: 1;
+    text-align: right;
+
+}
+
+h1 {
+    font-family: 'DrukWide-Bold-Web', Helvetica,Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
