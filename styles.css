@@ -12,6 +12,18 @@
     font-style: normal;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+body {
+    -ms-overflow-style: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -186,7 +198,7 @@ a{
 .left-section {
     flex: 1;
     min-width: 38%;
-    margin-left: 100px;
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -212,7 +224,7 @@ a{
 }
 
 .see-more::before{
-    content: "→"; 
+    content: "⟶"; 
     display: inline-block;
     transition: transform 0.3s ease-out;
 }
